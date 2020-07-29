@@ -1,0 +1,21 @@
+{
+  "name": "ngboss-api",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "author": "YuXian <hqiasjehrlb@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run build",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "axios": "0.19.2",
+    "moment": "2.27.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.27",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  }
+}
