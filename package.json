@@ -1,7 +1,8 @@
 {
   "name": "ngboss-api",
   "version": "1.0.0",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "YuXian <hqiasjehrlb@gmail.com>",
   "license": "MIT",
   "scripts": {
