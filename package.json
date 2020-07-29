@@ -10,9 +10,8 @@
     "url": "git@github.com:hqiasjehrlb/ngboss-vsp-api.git"
   },
   "scripts": {
-    "start": "npm run build",
     "build": "tsc",
-    "prepare": "npm run build",
+    "prepare": "tsc",
     "format": "prettier --write \"src/**/*.ts\""
   },
   "dependencies": {
