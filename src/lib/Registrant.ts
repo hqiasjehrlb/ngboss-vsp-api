@@ -7,7 +7,7 @@ export interface RegistrantUploadData {
 
 export interface RegistrantQueryData {
   registrant_id: string;
-  lang: 'zh_CN'|'en_US';
+  lang: 'zh_CN' | 'en_US';
 }
 
 export interface RegistrantAuditResult {
@@ -18,7 +18,7 @@ export interface RegistrantAuditResult {
 }
 
 class Registrant extends API {
-  async upload (data: RegistrantUploadData, opt?: APIOptionalProps) {
+  async upload(data: RegistrantUploadData, opt?: APIOptionalProps) {
     const method = 'cnnic.url.forward.newg.audit.registrant.materialupload';
     const originResponse = await this.apiCall(method, data, opt);
     const resp = chkResp(originResponse);
@@ -26,14 +26,14 @@ class Registrant extends API {
     return { status, originResponse };
   }
 
-  async status (data: RegistrantQueryData, opt?: APIOptionalProps) {
+  async status(data: RegistrantQueryData, opt?: APIOptionalProps) {
     const method = 'cnnic.url.forward.newg.audit.registrant.realNameQuery';
     const originResponse = await this.apiCall(method, data, opt);
     const resp = chkResp(originResponse);
     const status: APIResponseStatus = resp.status;
-    const audit_result: RegistrantAuditResult|undefined = resp.audit_result;
+    const audit_result: RegistrantAuditResult | undefined = resp.audit_result;
     return { status, audit_result, originResponse };
   }
 }
 
-export default Registrant
+export default Registrant;
