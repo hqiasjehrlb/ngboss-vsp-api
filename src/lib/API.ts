@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from 'axios';
-import qs = require('querystring');
+import * as qs from 'querystring';
 import moment = require('moment');
-import crypto = require('crypto');
+import * as crypto from 'crypto';
 
 export interface APIOptionalProps {
   app_key: string;
