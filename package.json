@@ -15,8 +15,10 @@
     "format": "prettier --write \"src/**/*.ts\""
   },
   "dependencies": {
+    "@types/crypto-js": "3.1.47",
     "axios": "0.19.2",
     "moment": "2.27.0",
+    "querystring": "0.2.0",
     "typescript": "3.9.7"
   },
   "devDependencies": {
