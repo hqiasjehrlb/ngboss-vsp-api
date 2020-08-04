@@ -27,7 +27,7 @@ export function signObj(obj: any, app_secret: string) {
     ar.push(`${key}${obj[key]}`);
   }
   ar.push(app_secret);
-  
+
   rslt.sign = crypto.createHash('md5').update(ar.join('')).digest('hex').toUpperCase();
   return rslt;
 }
