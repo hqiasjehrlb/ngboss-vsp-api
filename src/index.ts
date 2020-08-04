@@ -1,3 +1,3 @@
-import Client from './lib/Client';
+import Client from './Client';
 
 export = Client;
