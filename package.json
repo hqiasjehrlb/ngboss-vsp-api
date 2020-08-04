@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "tsc --build tsconfig.json",
-    "prepare": "npm run build",
+    "install": "npm run build",
     "format": "prettier --write \"src/**/*.ts\""
   },
   "dependencies": {
