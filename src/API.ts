@@ -68,8 +68,8 @@ class API {
   /* instance methods */
   /** return api call response body */
   async apiCall(method: string, data: object, opt?: APIOptionalProps) {
-    let app_key = this.app_key,
-      app_secret = this.app_secret;
+    let app_key = this.app_key;
+    let app_secret = this.app_secret;
     if (opt) {
       app_key = opt.app_key || app_key;
       app_secret = opt.app_secret || app_secret;

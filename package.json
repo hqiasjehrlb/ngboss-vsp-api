@@ -12,7 +12,8 @@
   "scripts": {
     "build": "tsc --build ./tsconfig.json",
     "install": "npm run build",
-    "format": "prettier --write \"src/**/*.ts\""
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p ./tsconfig.json"
   },
   "dependencies": {
     "axios": "0.19.2",
