@@ -13,6 +13,7 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p ./tsconfig.json",
     "build": "tsc --build ./tsconfig.json",
+    "test": "jest",
     "build:dev": "yarn format && yarn build",
     "install": "npm run build"
   },
@@ -23,6 +24,7 @@
     "typescript": "3.9.7"
   },
   "devDependencies": {
+    "jest": "^26.2.2",
     "nodemon": "^2.0.4",
     "pre-commit": "^1.2.2",
     "prettier": "^2.0.5",
@@ -32,6 +34,7 @@
   },
   "pre-commit": [
     "lint",
-    "build"
+    "build",
+    "test"
   ]
 }
