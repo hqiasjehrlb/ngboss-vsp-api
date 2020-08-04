@@ -10,18 +10,15 @@
     "url": "git@github.com:hqiasjehrlb/ngboss-vsp-api.git"
   },
   "scripts": {
-    "build": "tsc --build tsconfig.json",
+    "build": "tsc --build ./tsconfig.json",
     "install": "npm run build",
     "format": "prettier --write \"src/**/*.ts\""
   },
   "dependencies": {
     "axios": "0.19.2",
-    "crypto-js": "4.0.0",
-    "moment": "2.27.0",
-    "querystring": "0.2.0"
+    "moment": "2.27.0"
   },
   "devDependencies": {
-    "@types/crypto-js": "^3.1.47",
     "@types/node": "^14.0.27",
     "nodemon": "^2.0.4",
     "prettier": "^2.0.5",
