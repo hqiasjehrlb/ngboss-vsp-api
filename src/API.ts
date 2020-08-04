@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from 'axios';
 import qs = require('querystring');
 import moment = require('moment');
-import crypto = require('crypto');
+import { MD5 } from 'crypto-js';
 
 export interface APIOptionalProps {
   app_key: string;
@@ -28,7 +28,8 @@ export function signObj(obj: any, app_secret: string) {
   }
   ar.push(app_secret);
 
-  rslt.sign = crypto.createHash('md5').update(ar.join('')).digest('hex').toUpperCase();
+  // rslt.sign = crypto.createHash('md5').update(ar.join('')).digest('hex').toUpperCase();
+  rslt.sign = MD5(ar.join('')).toString().toUpperCase();
   return rslt;
 }
 
