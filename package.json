@@ -10,22 +10,28 @@
     "url": "git@github.com:hqiasjehrlb/ngboss-vsp-api.git"
   },
   "scripts": {
-    "build": "tsc --build ./tsconfig.json",
-    "install": "npm run build",
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "tslint -p ./tsconfig.json"
+    "lint": "tslint -p ./tsconfig.json",
+    "build": "tsc --build ./tsconfig.json",
+    "build:dev": "yarn format && yarn build",
+    "install": "npm run build"
   },
   "dependencies": {
+    "@types/node": "14.0.27",
     "axios": "0.19.2",
     "moment": "2.27.0",
-    "@types/node": "14.0.27",
     "typescript": "3.9.7"
   },
   "devDependencies": {
     "nodemon": "^2.0.4",
+    "pre-commit": "^1.2.2",
     "prettier": "^2.0.5",
     "ts-node": "^8.10.2",
     "tslint": "^6.1.2",
     "tslint-config-prettier": "^1.18.0"
-  }
+  },
+  "pre-commit": [
+    "lint",
+    "build"
+  ]
 }
